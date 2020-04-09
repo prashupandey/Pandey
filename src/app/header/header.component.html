@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar">
+    <div class="container"><a class="navbar-brand logo" [routerLink]="['/home']" routerLinkActive="router-link-active" ><img src="../../assets/icon.png" height="65px" width="75px"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse"
+            id="navbarNav">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active text-center">
+                  <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home </a>
+                </li>
+        
+                <li class="nav-item active text-center">
+                    <a class="nav-link" *ngIf="!loggedin" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login </a>
+                </li>
+        
+                <li class="nav-item active text-center">
+                    <a class="nav-link" *ngIf="!loggedin" [routerLink]="['/register']" routerLinkActive="router-link-active" >Register  </a>
+                </li>
+        
+                <li class="nav-item active text-center">
+                  <a class="nav-link" *ngIf="loggedin" (click)="logout()" [routerLink]="['/registration']" routerLinkActive="router-link-active" >Log out  </a>
+                </li> 
+            </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="mt-5"></div>
