@@ -1,0 +1,16 @@
+<p>admin-dashboard works!</p>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-4" style="border-right: 1px solid rgb(170, 170, 170);">
+            <mat-card>
+                <mat-card-content>
+  <button (click)="toggleaddDesign"()></button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+ 
+        <div class="col-8">
+       <app-add-design *ngIf="showaddDesign"></app-add-design>     
+        </div>
+    </div>
+</div>

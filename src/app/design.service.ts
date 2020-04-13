@@ -11,4 +11,8 @@ export class DesignService {
 {
 return this.http.post(this.url+'/addimg',file)
 }
+addDesign(formdata){
+  return this.http.post(this.url+'/add', formdata);
+}
+
 }

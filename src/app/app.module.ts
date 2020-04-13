@@ -21,6 +21,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DesignUploadComponent } from './design-upload/design-upload.component';
 import { AddDesignComponent } from './add-design/add-design.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddDesignComponent } from './add-design/add-design.component';
     UserDashBoardComponent,
     HeaderComponent,
     DesignUploadComponent,
-    AddDesignComponent
+    AddDesignComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,

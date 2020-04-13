@@ -1,1 +1,40 @@
 <p>add-design works!</p>
+<div class="container top-con">
+    <mat-card class="mb-2">
+          <mat-card-content class="card-body">
+                <p class="display-4 text-center">Add New Design</p>
+          </mat-card-content>
+        </mat-card>
+     <mat-card id="main-card">
+           <mat-card-content>
+                <div class="row mt-5">
+                      <div class="col-md-6">
+                            <img src="assets/frontimg.jpeg" class="img-fluid">
+                      </div>
+          
+                      <div class="col-md-6">
+                            <form [formGroup]="designform" (submit)="userSubmit(designform.value)">
+                                  <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
+                                        <mat-label>Name</mat-label>
+                                        <input matInput placeholder="user name" formControlName="name">
+                                        <mat-error *ngIf="returnControls().name.errors">Name is Required</mat-error>
+                                  </mat-form-field>
+          
+                                  <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
+                                    <mat-label>Description</mat-label>
+                                    <textarea matInput placeholder="password" formControlName="description"></textarea>
+                                    <mat-error *ngIf="returnControls().gender.errors">Gender is Required</mat-error>
+                              </mat-form-field>
+
+                            <div class="col-md-10">
+                            <button mat-raised-button color="warn" class="ml-auto mt-3">Sign Up</button>
+                             </div>
+                            </form>
+                            <div class="col-md-10">
+                           <button mat-button class="mt-4" [routerLink]="['/login']" routerLinkActive="router-link-active" >Already Registered? Sign In</button>
+                            </div>
+                      </div>
+                </div>
+           </mat-card-content>
+     </mat-card>
+</div>
