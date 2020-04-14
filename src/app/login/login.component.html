@@ -1,1 +1,29 @@
-<h1>Login Page</h1>
+<div class="container top-con">
+    <div class="row justify-content-center"> 
+        <mat-card class="col-md-4 login-card" > 
+          <mat-card-content>
+            <div class="text-center mt-3">
+              <img src="assets/login-top.png" height="150px">
+              <h3 class="h1 text-light">LOGIN</h3>
+            </div>
+              <form [formGroup]="loginform" (submit)="loginSubmit(loginform.value)">
+              <div class="example-container">
+             <br><br>
+                <input class="form-control mt-2" placeholder="Username" formControlName="username">
+          
+              <input class="form-control mt-4" placeholder="password" formControlName="password" type="password">
+            <button mat-raised-button class="btn btn-block mt-5" style="background-color: #dc3545;color: white;">Log in</button>     
+            <hr>
+            
+          </div>
+          </form>
+          <div class="row">
+            <div class="col-md-8">
+              <a [routerLink]="['/tourist']" routerLinkActive="router-link-active" ><p class="text-light text-sm">Sign Up</p></a>
+            </div>
+            <a [routerLink]="['/forgot']" routerLinkActive="router-link-active"><p class="text-light text-sm ">Forgot Password?</p></a>
+          </div>
+          </mat-card-content>
+        </mat-card>
+    </div>
+    </div>  
