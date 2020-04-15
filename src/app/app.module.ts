@@ -22,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DesignUploadComponent } from './design-upload/design-upload.component';
 import { AddDesignComponent } from './add-design/add-design.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { CreateOrderComponent } from './create-order/create-order.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     HeaderComponent,
     DesignUploadComponent,
     AddDesignComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    CreateOrderComponent
   ],
   imports: [
     BrowserModule,
