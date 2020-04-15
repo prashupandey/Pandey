@@ -1,10 +1,19 @@
-<p>admin-dashboard works!</p>
 <div class="container-fluid">
+    <p class="display-4 text-center">Admin Dashboard</p>
+    <hr>
     <div class="row justify-content-center">
         <div class="col-4" style="border-right: 1px solid rgb(170, 170, 170);">
             <mat-card>
                 <mat-card-content>
-  <button (click)="toggleaddDesign"()></button>
+                    <button mat-raised-button class="btn-block" (click)="toggleaddDesign()">
+                        Add New Design
+                    </button>
+                    <button mat-raised-button class="btn-block" (click)="toggleaddDesign()">
+                        Manage Designs
+                    </button>
+                    <button mat-raised-button class="btn-block" (click)="toggleaddDesign()">
+                        View Stats
+                    </button>
                 </mat-card-content>
             </mat-card>
         </div>

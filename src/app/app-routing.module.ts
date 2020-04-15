@@ -4,6 +4,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { DesignUploadComponent } from './design-upload/design-upload.component';
 import { AddDesignComponent } from './add-design/add-design.component';
+import { UserDashBoardComponent } from './user-dash-board/user-dash-board.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 
 const routes: Routes = [
@@ -11,7 +13,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'upload', component: DesignUploadComponent},
   {path: 'adddesign', component: AddDesignComponent},
-
+  {path: 'dashboard', component: UserDashBoardComponent},
+  {path: 'admin', component: AdminDashboardComponent},
 ];
 
 @NgModule({

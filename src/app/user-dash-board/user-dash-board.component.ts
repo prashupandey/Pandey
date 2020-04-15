@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDashBoardComponent implements OnInit {
 
+  showOrders = false;
+  showEditform = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleShowOrders(){
+    this.showOrders = true;
+    this.showEditform = false;
+  }
+
+  toggleEditForm(){
+    this.showOrders = false;
+    this.showEditform = true;
   }
 
 }
