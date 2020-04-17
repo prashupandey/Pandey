@@ -10,6 +10,7 @@ import { UserService } from '../user.service';
 export class CreateOrderComponent implements OnInit {
 orderform;
 user;
+hide = true;
   constructor(private fb: FormBuilder, private userservice: UserService) { }
 
   ngOnInit(): void {
@@ -29,4 +30,23 @@ user;
 
     })
   }
-}
+    orderSubmit(formdata){
+
+      if(this.orderform.invalid){
+        // alert('incorrect data')
+  
+        return;
+      }
+  
+      this.orderservice.addUser(formdata).subscribe(data => {
+        console.log(data);
+      })
+    }
+  
+    returnControls(){
+      return this.orderform.controls;
+    }
+  
+  } 
+  
+  
