@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { UserService } from '../user.service';
+import { OrderService } from '../order.service';
 
 @Component({
   selector: 'app-create-order',
@@ -11,7 +12,8 @@ export class CreateOrderComponent implements OnInit {
 orderform;
 user;
 hide = true;
-  constructor(private fb: FormBuilder, private userservice: UserService) { }
+  constructor(private fb: FormBuilder, private userservice: UserService,
+    private orderservice: OrderService) { }
 
   ngOnInit(): void {
   }
@@ -38,7 +40,7 @@ hide = true;
         return;
       }
   
-      this.orderservice.addUser(formdata).subscribe(data => {
+      this.orderservice.addOrder(formdata).subscribe(data => {
         console.log(data);
       })
     }
