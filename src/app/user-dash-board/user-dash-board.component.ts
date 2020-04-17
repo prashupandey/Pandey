@@ -22,7 +22,7 @@ export class UserDashBoardComponent implements OnInit {
     this.showOrderform = false;
 
   }
-  togglshowEditform(){
+  toggleEditform(){
     this.showOrders = false;
     this.showEditform = true;
     this.showOrderform = false;

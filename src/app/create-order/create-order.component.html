@@ -22,34 +22,58 @@
                                           </mat-form-field>
                   
                                           <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
-                                                <mat-label>Username</mat-label>
-                                                <input matInput placeholder="Mr. Anderson" formControlName="username">
-                                                <mat-error *ngIf="returnControls().username.errors">Username is Required</mat-error>
+                                                <mat-label>Gender</mat-label>
+                                                <input matInput placeholder="Mr. Anderson" formControlName="gender">
+                                                <mat-error *ngIf="returnControls().gender.errors">Gender is Required</mat-error>
                                           </mat-form-field>
         
                                           <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
-                                            <mat-label>Gender</mat-label>
-                                            <input matInput placeholder="Mr. Anderson" formControlName="gender">
-                                            <mat-error *ngIf="returnControls().gender.errors">Gender is Required</mat-error>
+                                            <mat-label>Contact</mat-label>
+                                            <input matInput placeholder="Mr. Anderson" formControlName="contact">
+                                            <mat-error *ngIf="returnControls().contact.errors">Contact is Required</mat-error>
                                       </mat-form-field>
         
                                       <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
-                                        <mat-label>Contact</mat-label>
-                                        <input matInput placeholder="Mr. Anderson" formControlName="contact">
-                                        <mat-error *ngIf="returnControls().contact.errors">Contact is Required</mat-error>
+                                        <mat-label>Cloth</mat-label>
+                                        <input matInput placeholder="Mr. Anderson" formControlName="cloth">
+                                        <mat-error *ngIf="returnControls().cloth.errors">Cloth is Required</mat-error>
                                   </mat-form-field>
         
                                   <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
-                                    <mat-label>Address</mat-label>
-                                    <input matInput placeholder="Mr. Anderson" formControlName="address">
-                                    <mat-error *ngIf="returnControls().address.errors">Address is Required</mat-error>
+                                    <mat-label>Size</mat-label>
+                                    <input matInput placeholder="Mr. Anderson" formControlName="size">
+                                    <mat-error *ngIf="returnControls().size.errors">Size is Required</mat-error>
                               </mat-form-field>
         
                               <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
-                                <mat-label>Email</mat-label>
-                                <input matInput placeholder="Mr. Anderson" formControlName="email">
-                                <mat-error *ngIf="returnControls().email.errors">Email is Required</mat-error>
+                                <mat-label>Tailor</mat-label>
+                                <input matInput placeholder="Mr. Anderson" formControlName="tailor">
+                                <mat-error *ngIf="returnControls().tailor.errors">Tailor is Required</mat-error>
                           </mat-form-field>
+
+                          <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
+                              <mat-label>Design</mat-label>
+                              <input matInput placeholder="Mr. Anderson" formControlName="design">
+                              <mat-error *ngIf="returnControls().design.errors">Design is Required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
+                              <mat-label>Address</mat-label>
+                              <input matInput placeholder="Mr. Anderson" formControlName="address">
+                              <mat-error *ngIf="returnControls().address.errors">Address is Required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
+                              <mat-label>Email</mat-label>
+                              <input matInput placeholder="Mr. Anderson" formControlName="email">
+                              <mat-error *ngIf="returnControls().email.errors">Email is Required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" style="font-size: small;" class="col-md-10">
+                              <mat-label>Description</mat-label>
+                              <input matInput placeholder="Mr. Anderson" formControlName="description">
+                              <mat-error *ngIf="returnControls().description.errors">Description is Required</mat-error>
+                        </mat-form-field>
         
                                           <mat-form-field appearance="outline" style="font-size: small;" class="col-md-5">
                                                 <mat-label>Password</mat-label>
