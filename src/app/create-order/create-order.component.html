@@ -74,26 +74,8 @@
                               <input matInput placeholder="Mr. Anderson" formControlName="description">
                               <mat-error *ngIf="returnControls().description.errors">Description is Required</mat-error>
                         </mat-form-field>
-        
-                                          <mat-form-field appearance="outline" style="font-size: small;" class="col-md-5">
-                                                <mat-label>Password</mat-label>
-                                                <input matInput placeholder="Mr. Anderson" formControlName="password" [type]="hide ? 'password' : 'text'">
-                                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" type="button">
-                                                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                                                 </button>
-                                                <mat-error *ngIf="returnControls().password.errors">Password is Required</mat-error>
-                                          </mat-form-field>
-                  
-                                          <mat-form-field appearance="outline" style="font-size: small;" class="col-md-5">
-                                                <mat-label>Confirm</mat-label>
-                                                <input matInput placeholder="Mr. Anderson" formControlName="confirm" [type]="hide ? 'password' : 'text'">
-                                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" type="button">
-                                                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                                   </button>
-                                      <mat-error *ngIf="returnControls().confirm.errors">Passwords must match</mat-error>
-                                    </mat-form-field>
-        
-                                    <div class="col-md-10">
+      
+                                <div class="col-md-10">
                                     <button mat-raised-button color="warn" class="ml-auto mt-3">Sign Up as Tourist</button>
                                      </div>
                                     </form>

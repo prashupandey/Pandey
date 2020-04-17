@@ -11,12 +11,16 @@
                     <button mat-raised-button class="btn-block" (click)="toggleShowOrders()">
                         Manage Orders
                     </button>
+                    <button mat-raised-button class="btn-block" (click)="toggleOrderform()">
+                        New Order
+                    </button>
+                    
                 </mat-card-content>
             </mat-card>
         </div>
  
         <div class="col-8">
-
+       <app-create-order *ngIf ="showOrderform"></app-create-order>
         </div>
     </div>
 </div>
