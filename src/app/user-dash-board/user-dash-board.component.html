@@ -5,19 +5,21 @@
         <div class="col-4" style="border-right: 1px solid rgb(170, 170, 170);">
             <mat-card>
                 <mat-card-content>
+                    <button mat-raised-button class="btn-block" (click)="toggleOrderform()">
+                        Upload Design
+                    </button>
+                    <button mat-raised-button class="btn-block" (click)="toggleOrderform()">
+                        New Order
+                    </button>
                     <button mat-raised-button class="btn-block" (click)="toggleEditform()">
                         Update Profile
                     </button>
                     <button mat-raised-button class="btn-block" (click)="toggleShowOrders()">
                         Manage Orders
                     </button>
-                    <button mat-raised-button class="btn-block" (click)="toggleOrderform()">
-                        New Order
-                    </button>
-                    
-                </mat-card-content>
-            </mat-card>
-        </div>
+                     </mat-card-content>
+                </mat-card>
+            </div>
  
         <div class="col-8">
        <app-create-order *ngIf ="showOrderform"></app-create-order>
