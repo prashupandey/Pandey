@@ -16,6 +16,7 @@ hide = true;
     private orderservice: OrderService) { }
 
   ngOnInit(): void {
+    this.initForm()
   }
   initForm(){
     this.orderform = this.fb.group({
