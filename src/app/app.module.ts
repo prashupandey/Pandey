@@ -14,6 +14,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';  
 import {MatButtonModule} from '@angular/material/button';  
 import {MatIconModule} from '@angular/material/icon';  
+import {MatRadioModule} from '@angular/material/radio'; 
+import {MatSelectModule} from '@angular/material/select';  
 
 import { UserDashBoardComponent } from './user-dash-board/user-dash-board.component';
 import { HeaderComponent } from './header/header.component';
@@ -23,6 +25,8 @@ import { DesignUploadComponent } from './design-upload/design-upload.component';
 import { AddDesignComponent } from './add-design/add-design.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
+import { BrowseclothComponent } from './browsecloth/browsecloth.component';
+import { AddclothComponent } from './addcloth/addcloth.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import { CreateOrderComponent } from './create-order/create-order.component';
     DesignUploadComponent,
     AddDesignComponent,
     AdminDashboardComponent,
-    CreateOrderComponent
+    CreateOrderComponent,
+    BrowseclothComponent,
+    AddclothComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,8 @@ import { CreateOrderComponent } from './create-order/create-order.component';
     MatIconModule,
     SweetAlert2Module,
     FontAwesomeModule,
-
+    MatRadioModule,
+    MatSelectModule,
 
 
 

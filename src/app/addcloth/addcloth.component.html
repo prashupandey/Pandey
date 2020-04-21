@@ -4,7 +4,7 @@
   
              <mat-card id="main-card">
                    <mat-card-content>
-                        <form [formGroup]="orderform" (submit)="orderSubmit(orderform.value)">
+                        <form [formGroup]="clothform" (submit)="formSubmit(clothform.value)">
                               <mat-form-field appearance="outline" style="font-size: small;" class="col-md-12">
                                     <mat-label>Name</mat-label>
                                     <input matInput placeholder="Mr. Anderson" formControlName="name">
