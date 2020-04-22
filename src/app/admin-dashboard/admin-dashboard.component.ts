@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminDashboardComponent implements OnInit {
 
   showaddDesign=false
+  showaddcloth=false
   
   constructor() { }
 
@@ -16,5 +17,10 @@ export class AdminDashboardComponent implements OnInit {
 
   toggleaddDesign(){ 
     this.showaddDesign=true
+    
+  }
+  toggleaddCloth(){ 
+    this.showaddcloth=true
+    
   }
 }

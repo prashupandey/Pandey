@@ -8,6 +8,9 @@
                     <button mat-raised-button class="btn-block" (click)="toggleaddDesign()">
                         Add New Design
                     </button>
+                    <button mat-raised-button class="btn-block" (click)="toggleaddCloth()">
+                        Add New Cloth
+                    </button>
                     <button mat-raised-button class="btn-block" (click)="toggleaddDesign()">
                         Manage Design
                     </button>
@@ -20,6 +23,8 @@
  
         <div class="col-8">
        <app-add-design *ngIf="showaddDesign"></app-add-design>     
+       <app-addcloth *ngIf="showaddcloth"></app-addcloth>     
+
         </div>
     </div>
 </div>
