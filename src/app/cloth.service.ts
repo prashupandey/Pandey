@@ -15,5 +15,7 @@ return this.http.post(this.url+'/addimg',file)
   addCloth(formdata){
     return this.http.post(this.url+'/add', formdata)
   }
-  
+  getCloth(){
+    return this.http.get(this.url+'/getall')
+  } 
 }

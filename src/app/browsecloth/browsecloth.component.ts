@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClothService } from '../cloth.service';
 
 @Component({
   selector: 'app-browsecloth',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./browsecloth.component.css']
 })
 export class BrowseclothComponent implements OnInit {
+ cloths;
 
-  constructor() { }
+  constructor( private clothservice: ClothService) { }
 
   ngOnInit(): void {
+    this.clothservice.getCloth().subscribe(data =>{
+      console.log(data)
+      this.cloths = data
+    })
   }
 
 }

@@ -78,7 +78,7 @@ export class AddclothComponent implements OnInit {
   
         return;
       }
-  
+      formdata.image = this.avatarName;
       this.clothservice.addCloth(formdata).subscribe(data => {
         console.log(data);
       })

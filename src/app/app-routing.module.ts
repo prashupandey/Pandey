@@ -6,6 +6,7 @@ import { DesignUploadComponent } from './design-upload/design-upload.component';
 import { AddDesignComponent } from './add-design/add-design.component';
 import { UserDashBoardComponent } from './user-dash-board/user-dash-board.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { BrowseclothComponent } from './browsecloth/browsecloth.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'adddesign', component: AddDesignComponent},
   {path: 'dashboard', component: UserDashBoardComponent},
   {path: 'admin', component: AdminDashboardComponent},
+  {path: 'browsecloth', component: BrowseclothComponent},
 ];
 
 @NgModule({
