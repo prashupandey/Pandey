@@ -1,0 +1,26 @@
+<mat-card *ngIf="cloths">
+    <mat-card-content>
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let cloth of cloths">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p class="mx-auto">{{cloth.name}}</p>
+                </mat-panel-title>
+                <mat-panel-description>
+                    Booked {{cloth.type}}
+                </mat-panel-description>
+                
+                </mat-expansion-panel-header>
+                <p style="color: rgba(0, 0, 0, 0.678);">
+                  <!-- Start Date: {{.stateDate | date}}          <br>
+                  End Date: {{order.endDate | date}}    <br>               
+                  Start Time: {{order.startTime.hour}}:{{order.startTime.minute}} <br>       
+                  End Time: {{order.endTime.hour}}:{{order.endTime.minute}}<br>
+                  City: {{order.city}}          <br> -->
+                  <!-- Completed: {{order.complete}}  <br> -->
+                  </p> 
+                  <!-- <button mat-raised-button (click)="toggleForm(host)">Edit</button> -->
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>

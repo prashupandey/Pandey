@@ -9,6 +9,7 @@ export class AdminDashboardComponent implements OnInit {
 
   showaddDesign=false
   showaddcloth=false
+  showmanagecloth=false
   
   constructor() { }
 
@@ -21,6 +22,11 @@ export class AdminDashboardComponent implements OnInit {
   }
   toggleaddCloth(){ 
     this.showaddcloth=true
+    
+  }
+
+  togglemanageCloth(){ 
+    this.showmanagecloth=true
     
   }
 }

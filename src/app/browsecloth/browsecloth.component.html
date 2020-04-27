@@ -1,1 +1,18 @@
-<p>browsecloth works!</p>
+<div class="container">
+    <mat-card class="mt-5" *ngFor="let cloth of cloths">
+        <mat-card-content class="card-body">
+            <div class="row">
+                <div class="col-md-4 img-div" [style.backgroundImage]="'url(http://localhost:3000/'+cloth.image+')'">
+                    
+
+                </div>
+                <div class="col-md-8">
+                   {{cloth.name}}
+                   {{cloth.brand}}
+                   {{cloth.price}}
+                   {{cloth.type}}
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -17,6 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio'; 
 import {MatSelectModule} from '@angular/material/select';  
 
+import {MatExpansionModule} from '@angular/material/expansion';
+
 import { UserDashBoardComponent } from './user-dash-board/user-dash-board.component';
 import { HeaderComponent } from './header/header.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
@@ -27,6 +29,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { BrowseclothComponent } from './browsecloth/browsecloth.component';
 import { AddclothComponent } from './addcloth/addcloth.component';
+import { ManageClothComponent } from './manage-cloth/manage-cloth.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,8 @@ import { AddclothComponent } from './addcloth/addcloth.component';
     AdminDashboardComponent,
     CreateOrderComponent,
     BrowseclothComponent,
-    AddclothComponent
+    AddclothComponent,
+    ManageClothComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +63,7 @@ import { AddclothComponent } from './addcloth/addcloth.component';
     FontAwesomeModule,
     MatRadioModule,
     MatSelectModule,
+    MatExpansionModule,
 
 
 
