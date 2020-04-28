@@ -30,6 +30,7 @@ import { CreateOrderComponent } from './create-order/create-order.component';
 import { BrowseclothComponent } from './browsecloth/browsecloth.component';
 import { AddclothComponent } from './addcloth/addcloth.component';
 import { ManageClothComponent } from './manage-cloth/manage-cloth.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ManageClothComponent } from './manage-cloth/manage-cloth.component';
     CreateOrderComponent,
     BrowseclothComponent,
     AddclothComponent,
-    ManageClothComponent
+    ManageClothComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
