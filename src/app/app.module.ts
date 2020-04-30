@@ -31,6 +31,8 @@ import { BrowseclothComponent } from './browsecloth/browsecloth.component';
 import { AddclothComponent } from './addcloth/addcloth.component';
 import { ManageClothComponent } from './manage-cloth/manage-cloth.component';
 import { CartComponent } from './cart/cart.component';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { CartComponent } from './cart/cart.component';
     BrowseclothComponent,
     AddclothComponent,
     ManageClothComponent,
-    CartComponent
+    CartComponent,
+    NgxStarRatingModule,
+
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,9 @@ import { CartComponent } from './cart/cart.component';
     MatRadioModule,
     MatSelectModule,
     MatExpansionModule,
-
+    NgxStarRatingModule,
+    NgbPaginationModule,
+    NgbAlertModule,
 
 
   ],
