@@ -63,6 +63,7 @@ export class AddclothComponent implements OnInit {
       this.imgURL = reader.result;
     }
   }
+  
   initForm(){
     this.clothform = this.fb.group({
       name : ['', Validators.required],
@@ -82,10 +83,10 @@ export class AddclothComponent implements OnInit {
       this.clothservice.addCloth(formdata).subscribe(data => {
         console.log(data);
       })
-    }
+  }
   
-    returnControls(){
-      return this.clothform.controls;
-    }
+  returnControls(){
+    return this.clothform.controls;
+  }
 
 }
