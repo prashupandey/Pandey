@@ -6,10 +6,10 @@ import { ClothService } from '../cloth.service';
 
 @Component({
   selector: 'app-product-detail',
-  templateUrl: './cloth-detail.component.html',
-  styleUrls: ['./cloth-detail.component.css']
+  templateUrl: './clothdetails.component.html',
+  styleUrls: ['./clothdetails.component.css']
 })
-export class clothDetailComponent implements OnInit {
+export class ClothdetailComponent implements OnInit {
 
   cloth;
   reviewForm;
