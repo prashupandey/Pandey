@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../cloth.service.';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 import { ClothService } from '../cloth.service';
@@ -9,7 +8,7 @@ import { ClothService } from '../cloth.service';
   templateUrl: './clothdetails.component.html',
   styleUrls: ['./clothdetails.component.css']
 })
-export class ClothdetailComponent implements OnInit {
+export class ClothdetailsComponent implements OnInit {
 
   cloth;
   reviewForm;
