@@ -34,6 +34,7 @@ import { CartComponent } from './cart/cart.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import {NgbPaginationModule, NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ClothdetailsComponent } from './clothdetails/clothdetails.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { ClothdetailsComponent } from './clothdetails/clothdetails.component';
     ManageClothComponent,
     CartComponent,
     ClothdetailsComponent,
+    HomeComponent,
 
   ],
   imports: [

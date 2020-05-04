@@ -1,29 +1,42 @@
-<div class="container">
-    <mat-card class="mt-5" *ngFor="let cloth of cloths">
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-3 mt-5">
+      <mat-card>
         <mat-card-content class="card-body">
+          <p class="h6">Search Cloth that suits you</p>
+          <hr>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-8">
+      <mat-card class="mt-5" *ngFor="let cloth of cloths">
+        <mat-card-content class="">
             <div class="row">
-                <div class="col-md-6 img-div" [style.backgroundImage]="'url(http://localhost:3000/'+cloth.image+')'">
-                    
+                <div class="col-md-3 img-div" [style.backgroundImage]="'url(http://localhost:3000/'+cloth.image+')'">
 
                 </div>
-                <div class="col-md-6">
-                   <p>
-                    {{cloth.name}}
-                   </p>
-                  <p>
-                    {{cloth.brand}}
-                  </p>
-                   <p>
-                    {{cloth.price}}
-                   </p>
-                  <p>
-                    {{cloth.type}}
-                  </p>
-                  <button>
-                      Add To Cart
-                  </button>
+                <div class="col-md">
+                   <div class="card-body">
+                    <p>
+                      {{cloth.name}}
+                     </p>
+                    <p>
+                      {{cloth.brand}}
+                    </p>
+                     <p>
+                      {{cloth.price}}
+                     </p>
+                    <p>
+                      {{cloth.type}}
+                    </p>
+                    <button>
+                        Add To Cart
+                    </button>
+                   </div>
                 </div>
             </div>
         </mat-card-content>
     </mat-card>
+    </div>
+  </div>
 </div>

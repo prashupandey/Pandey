@@ -16,16 +16,25 @@ export class AdminDashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  hideall(){
+    this.showaddDesign=false
+    this.showaddcloth=false
+    this.showmanagecloth=false
+  }
+
   toggleaddDesign(){ 
+    this.hideall();
     this.showaddDesign=true
     
   }
   toggleaddCloth(){ 
+    this.hideall();
     this.showaddcloth=true
     
   }
 
   togglemanageCloth(){ 
+    this.hideall();
     this.showmanagecloth=true
     
   }
