@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-md-3 mt-5">
       <mat-card>
@@ -8,35 +8,121 @@
         </mat-card-content>
       </mat-card>
     </div>
-    <div class="col-md-8">
-      <mat-card class="mt-5" *ngFor="let cloth of cloths">
-        <mat-card-content class="">
-            <div class="row">
-                <div class="col-md-3 img-div" [style.backgroundImage]="'url(http://localhost:3000/'+cloth.image+')'">
+    <div class="col-md-8" style="height: 40rem;overflow-y: auto;">
+      <section class="top-img">
+        
+      </section>
 
-                </div>
-                <div class="col-md">
-                   <div class="card-body">
-                    <p>
-                      {{cloth.name}}
-                     </p>
-                    <p>
-                      {{cloth.brand}}
-                    </p>
-                     <p>
-                      {{cloth.price}}
-                     </p>
-                    <p>
-                      {{cloth.type}}
-                    </p>
-                    <button>
-                        Add To Cart
-                    </button>
-                   </div>
-                </div>
-            </div>
-        </mat-card-content>
-    </mat-card>
+
+
+
+    <hr>
+
+
+      
     </div>
+  </div>
+</div> -->
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+      <div class="col-2">
+          <mat-card class="mt-5">
+              <mat-card-content class="card-body">
+
+              </mat-card-content>
+          </mat-card>
+      </div>
+
+      <div class="col-10" style="height: 100vh;overflow-y: auto;">
+        
+        <section class="top-img mt-5"></section>
+        
+        <section>
+
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#upload" aria-expanded="false" aria-controls="collapseExample">
+              Upload Cloth details
+            </button>
+      
+            <div class="collapse" id="upload">
+              <mat-card>
+                <mat-card-content class="card-body">
+                    <h1 class="text-center">Upload your Cloth details</h1>  
+                    <hr>
+        
+                    <form [formGroup]="clothform" (submit)="formSubmit(clothform.value)">
+                        <mat-form-field appearance="outline" style="font-size: small;" class="col-md-12">
+                              <mat-label>Name</mat-label>
+                              <input matInput placeholder="Name" formControlName="name">
+                              <mat-error *ngIf="returnControls().name.errors">Name is Required</mat-error>
+                        </mat-form-field>
+        
+                    <mat-form-field appearance="outline" style="font-size: small;" class="col-md-12">
+                      <mat-label>Brand</mat-label>
+                      <input matInput placeholder="Brand" formControlName="brand">
+                      <mat-error *ngIf="returnControls().brand.errors">Brand is Required</mat-error>
+                </mat-form-field>
+            <mat-form-field appearance="outline" style="font-size: small;" class="col-md-12">
+              <mat-label>Price</mat-label>
+              <input matInput placeholder="Price" formControlName="price">
+              <mat-hint>per metre</mat-hint>
+              <mat-error *ngIf="returnControls().price.errors">Price is Required</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" style="font-size: small;" class="col-md-12">
+            <mat-label>Type</mat-label>
+            <input matInput placeholder="Type" formControlName="type">
+            <mat-error *ngIf="returnControls().type.errors">Type is Required</mat-error>
+        </mat-form-field>
+        
+        
+              <div class="col-md-10">
+                  <input type="file" (change)="uploadImage($event)">
+                  <img [src] = "imgURL">
+                  <br>
+                  <button mat-raised-button color="warn" class="ml-auto mt-3">Add Cloth</button>
+                   </div>
+                  </form>
+        
+                </mat-card-content>
+            </mat-card>
+            </div>
+
+          </section>
+          <p class="display-4 mt-5 ml-5">Select your perfect design</p>
+          <hr>
+          <div>
+              <div class="card-body">
+                    <mat-card class="mt-5" *ngFor="let cloth of cloths">
+                      <mat-card-content class="">
+                          <div class="row">
+                              <div class="col-md-3 img-div" [style.backgroundImage]="'url(http://localhost:3000/'+cloth.image+')'">
+              
+                              </div>
+                              <div class="col-md">
+                                  <div class="card-body">
+                                  <p>
+                                    {{cloth.name}}
+                                    </p>
+                                  <p>
+                                    {{cloth.brand}}
+                                  </p>
+                                    <p>
+                                    {{cloth.price}}
+                                    </p>
+                                  <p>
+                                    {{cloth.type}}
+                                  </p>
+                                  <button (click)="checkout(cloth)">
+                                      Place Order
+                                  </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </mat-card-content>
+                  </mat-card>
+              </div>
+          </div>
+      </div>
   </div>
 </div>

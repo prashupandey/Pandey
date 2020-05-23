@@ -1,7 +1,9 @@
-<div class="container top-con">
+<div class="container top-con" style="background-color: rgba(240, 248, 255, 0);">
       <div class="img-div" [style.background-image]="'url(/assets/add-top.jpg)'">
 
       </div>
+
+      
      <mat-card id="main-card">
            <mat-card-content>
             <form [formGroup]="designform" (submit)="userSubmit(designform.value)">
@@ -16,14 +18,15 @@
                     <textarea matInput placeholder="password" formControlName="description"></textarea>
                     <mat-error *ngIf="returnControls().description.errors">Description is Required</mat-error>
               </mat-form-field>
-
+              <input type="file" (change)="uploadImage($event)">
+                          <img [src] = "imgURL">
             <div class="col-md-10">
-            <button mat-raised-button color="warn" class="ml-auto mt-3">Sign Up</button>
+            <button mat-raised-button color="warn" class="ml-auto mt-3">Add Design</button>
              </div>
             </form>
-            <div class="col-md-10">
-           <button mat-button class="mt-4" [routerLink]="['/login']" routerLinkActive="router-link-active" >Already Registered? Sign In</button>
-            </div>
+            
+
+            
            </mat-card-content>
      </mat-card>
 </div>

@@ -7,19 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminDashboardComponent implements OnInit {
 
-  showaddDesign=false
-  showaddcloth=false
-  showmanagecloth=false
+  showaddDesign=false;
+  showaddcloth=false;
+  showmanagecloth=false;
+  showmanagedesign=false;
+  showadddesigner=false;
+  showmanagedesigner=false;
+  showwebstats = true;
+
+  admin;
   
   constructor() { }
 
   ngOnInit(): void {
+    document.body.classList.add('admin');
+    this.admin = JSON.parse(sessionStorage.getItem('admin'));
+  }
+
+  ngOnDestroy(){
+    document.body.classList.remove('admin');
   }
 
   hideall(){
     this.showaddDesign=false
+    this.showadddesigner=false
+    this.showmanagedesigner=false
     this.showaddcloth=false
     this.showmanagecloth=false
+    this.showwebstats=false
   }
 
   toggleaddDesign(){ 
@@ -38,4 +53,25 @@ export class AdminDashboardComponent implements OnInit {
     this.showmanagecloth=true
     
   }
+
+  togglemanageDesign(){
+    this.hideall();
+    this.showmanagedesign = true;
+  }
+
+  togglemanageDesigner(){
+    this.hideall();
+    this.showmanagedesigner = true;
+  }
+
+  toggleaddDesigner(){
+    this.hideall();
+    this.showadddesigner = true;
+  }
+
+  togglewebstats(){
+    this.hideall();
+    this.showwebstats = true;
+  }
+
 }

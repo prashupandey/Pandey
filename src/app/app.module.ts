@@ -35,6 +35,16 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
 import {NgbPaginationModule, NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ClothdetailsComponent } from './clothdetails/clothdetails.component';
 import { HomeComponent } from './home/home.component';
+import { BrowsedesignComponent } from './browsedesign/browsedesign.component';
+import { ManagedesignComponent } from './managedesign/managedesign.component';
+import { AddDesignerComponent } from './add-designer/add-designer.component';
+import { ManageDesignerComponent } from './manage-designer/manage-designer.component';
+import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
+import { ChatComponent } from './chat/chat.component';
+import { WebstatsComponent } from './webstats/webstats.component';
+import { DesignerloginComponent } from './designerlogin/designerlogin.component';
+import { BrowsedesignerComponent } from './browsedesigner/browsedesigner.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +63,16 @@ import { HomeComponent } from './home/home.component';
     CartComponent,
     ClothdetailsComponent,
     HomeComponent,
+    BrowsedesignComponent,
+    ManagedesignComponent,
+    AddDesignerComponent,
+    ManageDesignerComponent,
+    DesignerDashboardComponent,
+    ChatComponent,
+    WebstatsComponent,
+    DesignerloginComponent,
+    BrowsedesignerComponent,
+    CheckoutComponent,
 
   ],
   imports: [

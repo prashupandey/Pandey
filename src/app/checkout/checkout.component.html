@@ -1,0 +1,47 @@
+<div class="container">
+
+    <section class="mt-5" style="border-left: 3px solid red;padding-left: 2rem;">
+      <p class="display-4 text-center">
+        Order Details
+      </p>
+      <hr>
+  
+      <div class="mt-5">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-6">
+                <p class="h4 mt-3">Product Name :</p>
+                <p class="h1 mt-3">Total Amount :</p>
+              </div>
+              <div class="col-6">
+                <!-- <p class="h4 mt-3">{{order.modeldata.name}}</p>
+                <p class="h1 mt-3">₹ {{order.modeldata.price}}</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <mat-card>
+              <!-- <img mat-card-image [src]="'http://localhost:3000/products/images/'+order.modeldata.image" style="height: 15rem;"> -->
+            </mat-card>
+          </div>
+        </div>
+      </div>
+  
+    </section>
+  
+    <mat-card class="mt-5">
+      <mat-card-content class="card-body">
+        <form #checkout="ngForm" (ngSubmit)="getIntent()" class="checkout">
+          <div class="form-row">
+            <label for="card-info">Card Info</label>
+            <div id="card-info" #cardInfo></div>
+        
+            <div id="card-errors" role="alert" *ngIf="error">{{ error }}</div>
+          </div>
+        
+          <button type="submit">Pay ₹</button>
+      </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

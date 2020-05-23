@@ -12,4 +12,8 @@ export class OrderService {
   addOrder(formdata){
     return this.http.post(this.url+'/add', formdata)
   }
+
+  getAllOrders(){
+    return this.http.get(this.url+'/getall');
+  }
 }

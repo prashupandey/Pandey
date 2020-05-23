@@ -1,0 +1,38 @@
+<mat-card *ngIf="designs">
+    <mat-card-content>
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let design of designs">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p class="mx-auto">{{design.name}}</p>
+                </mat-panel-title>
+                <mat-panel-description>
+                    Added {{design.created}}
+                </mat-panel-description>
+                
+                </mat-expansion-panel-header>
+                <p style="color: rgba(0, 0, 0, 0.678);">
+                  <div class="row">
+                      <div class="col-8">
+                          <div class="row">
+                              <div class="col-6">
+                                <p class="h6">Name : </p>
+                                <p class="h6">Uploaded on : </p>
+                              </div>
+                              <div class="col-6">
+                                <p class="h6">{{design.name}}</p>
+                                <p class="h6">{{design.created | date}}</p>
+                                <p class="h6">{{design.description}}</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-3">
+                        <img [src]="'http://localhost:3000/design/'+design.image" class="img-fluid">
+                      </div>
+                  </div>
+                  <button class="mt-4" mat-button color="error" (click)="delete(design._id)">Delete</button>
+                  <!-- <button mat-raised-button (click)="toggleForm(host)">Edit</button> -->
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>

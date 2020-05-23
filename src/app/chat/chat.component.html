@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-content id="chatarea">
+        <div class="chat-area">
+            <div class="msg-area" >
+                <p class="msg-text" *ngFor="let msg of chatMessages" [class]="getClass(msg.sender)?'sent-msg':'rec-msg'">{{msg.message}}</p>
+            </div>
+        </div>
+        <hr class="mt-5">
+        <form [formGroup]="chatform" (submit)="sendMessage(chatform.value)">
+            <div class="input-group">
+                <input class="form-control form-control-lg" formControlName="message">
+                <div class="input-group-append">
+                    <button class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

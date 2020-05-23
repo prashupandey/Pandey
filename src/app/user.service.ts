@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class UserService {
 
-  url = 'http:localhost:3000/user'
+  url = 'http://localhost:3000/user'
   constructor(private http: HttpClient, private router: Router) { }
 
   addUser(formdata){
@@ -15,11 +15,11 @@ export class UserService {
   }
 
   getByUsername(username){
-    return this.http.get(this.url+`/users/getbyusername/${username}`);
+    return this.http.get(this.url+`/getbyusername/${username}`);
   }
  
   getAllUsers(){
-    return this.http.get(this.url+`/users/getall`);
+    return this.http.get(this.url+`/getall`);
   }
   
   logout(){

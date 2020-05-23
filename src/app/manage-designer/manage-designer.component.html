@@ -1,0 +1,25 @@
+<mat-card *ngIf="designers">
+    <mat-card-content>
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let designer of designers">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p class="mx-auto">{{designer.name}}</p>
+                </mat-panel-title>
+                <mat-panel-description>
+                    Added {{designer.created}}
+                </mat-panel-description>
+                
+                </mat-expansion-panel-header>
+                <p style="color: rgba(0, 0, 0, 0.678);">
+                  <div class="row">
+                      <div class="col-8"></div>
+                      <div class="col-3">
+                        <img [src]="'http://localhost:3000/design/'+designer.image" class="img-fluid">
+                      </div>
+                  </div>
+                  <!-- <button mat-raised-button (click)="toggleForm(host)">Edit</button> -->
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>

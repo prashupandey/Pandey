@@ -18,19 +18,18 @@ hide = true;
   ngOnInit(): void {
     this.initForm()
   }
+
   initForm(){
     this.orderform = this.fb.group({
       name : ['', Validators.required],
       gender : ['', Validators.required],
       contact : ['', Validators.required],
-      cloth : ['', Validators.required],
       size : ['', Validators.required],
       tailor : ['', Validators.required],
       design : ['', Validators.required],
       address : ['', Validators.required],
       email : ['', Validators.required],
       description : ['', Validators.required],
-
     })
   }
     orderSubmit(formdata){

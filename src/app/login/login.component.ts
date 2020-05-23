@@ -34,15 +34,15 @@ export class LoginComponent implements OnInit {
         if(logged_user['password'] == formdata['password']){
  
           //add user details to sessionstorage
-          sessionStorage.setItem('user', JSON.stringify(logged_user));
-          sessionStorage.setItem('admin', JSON.stringify(true));
  
           if(logged_user['admin']){
             //navigate to admin dashboard
+            sessionStorage.setItem('admin', JSON.stringify(logged_user));
             this.router.navigate(['/admin'])
             return;
           }else{
             //navigate to home
+            sessionStorage.setItem('user', JSON.stringify(logged_user));
             this.router.navigate(['/home'])
             return;
           }

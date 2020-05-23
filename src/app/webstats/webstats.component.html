@@ -1,0 +1,108 @@
+<div class="row card-row">
+    <div class="col-md-3 mt-5">
+        <mat-card class="card-content-mini bg-primary" *ngIf="users">
+            <mat-card-content class="">
+                <p class="h3 text-center">Registered Users</p>
+                <hr>
+                <p class="display-4 ml-5">{{users.length}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-3 mt-5">
+        <mat-card class="card-content-mini bg-danger" *ngIf="designs">
+            <mat-card-content class="">
+                <p class="h3 text-center">Total Designs</p>
+                <hr>
+                <p class="display-4 ml-5">{{designs.length}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-3 mt-5">
+        <mat-card class="card-content-mini bg-warning" *ngIf="orders">
+            <mat-card-content class="">
+                <p class="h3 text-center">Registered Orders</p>
+                <hr>
+                <p class="display-4 ml-5">{{orders.length}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-3 mt-5">
+        <mat-card class="card-content-mini bg-secondary" *ngIf="designers">
+            <mat-card-content class="">
+                <p class="h3 text-center">Registered Designers</p>
+                <hr>
+                <p class="display-4 ml-5">{{designers.length}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-3">
+        <button class="col-md" mat-raised-button (click)="viewUsers()">Registrations</button>
+    </div>
+
+    <div class="col-3">
+        <button class="col-md" mat-raised-button (click)="viewDesigners()">Designers</button>
+    </div>
+
+    <div class="col-3">
+        <button class="col-md" mat-raised-button color="primary" (click)="viewOrders()">Orders</button>
+    </div>
+    
+    
+    
+</div>
+
+<mat-card class="mt-3">
+    <div class="chart" id="regByDate" style="width: 86rem;height: 30rem;"></div>
+</mat-card>
+<div class="row">
+    <div class="col-md-4 mt-5">
+        <mat-card class="card-content">
+            <mat-card-content class="card-body">
+                
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="col-md-8 mt-5">
+        <mat-card class="card-content">
+            <mat-card-content class="card-body">
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3 mt-5">
+        <mat-card class="card-content-mini">
+            <mat-card-content class="card-body">
+                
+                
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-3 mt-5">
+        <mat-card class="card-content-mini">
+            <mat-card-content class="card-body">
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-3 mt-5">
+        <mat-card class="card-content-mini">
+            <mat-card-content class="card-body">
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-3 mt-5">
+        <mat-card class="card-content-mini">
+            <mat-card-content class="card-body">
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

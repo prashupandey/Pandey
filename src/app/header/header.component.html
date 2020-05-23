@@ -22,6 +22,22 @@
                 <li class="nav-item active text-center">
                     <a class="nav-link" [routerLink]="['/browsecloth']" routerLinkActive="router-link-active">Browse Cloth</a>
                 </li>
+
+                <li class="nav-item active text-center">
+                    <a class="nav-link" [routerLink]="['/browsedesign']" routerLinkActive="router-link-active">Browse Design</a>
+                </li>
+
+                <li class="nav-item active text-center">
+                    <a class="nav-link" [routerLink]="['/browsedesigner']" routerLinkActive="router-link-active">Browse Designer</a>
+                </li>
+
+                <li class="nav-item active text-center">
+                    <a class="nav-link" [routerLink]="['/ddash']" routerLinkActive="router-link-active">Designer Dashboard</a>
+                </li>
+
+                <li class="nav-item active text-center">
+                    <a class="nav-link" [routerLink]="['/dlogin']" routerLinkActive="router-link-active">Designer Login</a>
+                </li>
         
                 <li class="nav-item active text-center">
                     <a class="nav-link" *ngIf="!loggedin" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login </a>
@@ -38,4 +54,3 @@
         </div>
     </div>
   </nav>
-  <div class="mt-5"></div>

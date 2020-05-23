@@ -9,30 +9,41 @@ export class UserDashBoardComponent implements OnInit {
 
   showOrders = false;
   showEditform = false;
-  showOrderform = true;
+  showOrderform = false;
+  showChat = true;
   
+  user;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.user = JSON.parse(sessionStorage.getItem('user'));
   }
 
   toggleShowOrders(){
+    this.hideall();
     this.showOrders = true;
-    this.showEditform = false;
-    this.showOrderform = false;
 
   }
   toggleEditform(){
-    this.showOrders = false;
+    this.hideall();
     this.showEditform = true;
-    this.showOrderform = false;
   }
   
   toggleOrderform(){
+    this.hideall();
+    this.showOrderform = true;
+  }
+
+  // toggleChat(){
+  //   this.hideall();
+  //   this.showChat()
+  // }
+
+  hideall(){
     this.showOrders = false;
     this.showEditform = false;
-    this.showOrderform = true;
-
+    this.showOrderform = false;
+    this.showChat = false;
   }
 }

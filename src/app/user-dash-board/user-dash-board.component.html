@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <p class="display-4 text-center">User Dashboard</p>
     <hr>
     <div class="row justify-content-center">
@@ -6,16 +6,16 @@
             <mat-card>
                 <mat-card-content>
                     <button mat-raised-button class="btn-block" (click)="toggleOrderform()">
-                        Upload Design
+                        
                     </button>
                     <button mat-raised-button class="btn-block" (click)="toggleOrderform()">
-                        New Order
+                        
                     </button>
                     <button mat-raised-button class="btn-block" (click)="toggleEditform()">
-                        Update Profile
+                        
                     </button>
                     <button mat-raised-button class="btn-block" (click)="toggleShowOrders()">
-                        Manage Orders
+                        
                     </button>
                      </mat-card-content>
                 </mat-card>
@@ -23,6 +23,38 @@
  
         <div class="col-8">
        <app-create-order *ngIf ="showOrderform"></app-create-order>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 sidebar text-center">
+            <img [src]="'assets/img/testimonials-1.jpg'" class="rounded-circle img-fluid" style="height: 10rem;">
+            <h4>Hello, {{user.name}}</h4>
+            <h4>{{user.email}}</h4>
+            <hr>
+
+            <button mat-button class="btn-block mt-3" (click)="toggleOrderform()" style="background-color: rgba(240, 248, 255, 0.1);">
+                New Order
+            </button>
+            <button mat-button class="btn-block mt-3" (click)="toggleEditform()" style="background-color: rgba(240, 248, 255, 0.1);">
+                Update Profile
+            </button>
+            <button mat-button class="btn-block mt-3" (click)="toggleShowOrders()" style="background-color: rgba(240, 248, 255, 0.1);">
+                Manage Orders
+            </button>
+
+        </div>
+        <div class="col-10 panel">
+            <div class="row justify-content-center">
+                <div class="col-11">
+                    <h1>User Dashboard</h1>
+                    <hr>
+                    <app-create-order *ngIf ="showOrderform"></app-create-order>    
+                    <app-chat *ngIf="showChat" [user] = "user" [recId] = "'5ec122970e6b6c22742d3ef3'"></app-chat>
+                </div>
+            </div>
         </div>
     </div>
 </div>

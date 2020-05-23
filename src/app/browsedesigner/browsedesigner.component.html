@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-2">
+            <mat-card class="mt-5">
+                <mat-card-content class="card-body">
+
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div class="col-10" style="height: 100vh;overflow-y: auto;">
+            <section class="top-img">
+
+            </section>
+            <p class="display-4 mt-5 ml-5">Select your perfect design</p>
+            <hr>
+            <div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mt-4" *ngFor="let designer of designers">
+                            <mat-card (click)="selectDesigner(designer)">
+                                <img mat-card-image [src]="'http://localhost:3000/designer/'+designer.image" style="height: 20rem;">
+                            
+                                <mat-card-content class="card-body">
+                                    <h2>{{designer.name}}</h2>
+                                    <h4>Specialized in {{designer.spec}}</h4>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,3 +4,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.top-img{
+    background-image: url('/assets/bc-top.png');
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
