@@ -22,16 +22,20 @@ export class CheckoutComponent implements OnInit {
   designer;
   order;
   orderform;
+  name;
+  designer_charge = 2000;
+
   constructor(private orderservice: OrderService, private router: Router,
     private cd: ChangeDetectorRef, private http: HttpClient, private fb: FormBuilder) { }
  
   ngOnInit() {
-    console.log(`to pay ${this.amount}`)
+
     this.user = JSON.parse(sessionStorage.getItem('user')); 
     this.designer = JSON.parse(sessionStorage.getItem('designer'));
     let cloth = JSON.parse(sessionStorage.getItem('cloth'));
     let design = JSON.parse(sessionStorage.getItem('design'));
-    this.order = { design : design, cloth : cloth};
+    this.amount = this.designer_charge + cloth.price + design.price;
+    this.order = { design : design, cloth : cloth, amount : this.amount};
     this.initForm();
     // this.loadStripe();
   }
@@ -41,7 +45,8 @@ export class CheckoutComponent implements OnInit {
       user : this.user._id,
       designer : this.designer._id,
       data : this.order,
-      created : new Date()
+      created : new Date(),
+      name : this.name,
     })
   }
  
@@ -76,6 +81,7 @@ export class CheckoutComponent implements OnInit {
     } else {
       this.error = null;
     }
+
     this.cd.detectChanges();
   }
   
@@ -113,7 +119,7 @@ export class CheckoutComponent implements OnInit {
           title: 'Order Placed!!',
           text: 'You will be informed once it confirmed!'
         }).then(() => {
-          window.location.replace('http://localhost:3000/products/zipfiles/'+this.order.modeldata.file);
+          this.router.navigate(['/dashboard']);
         })
       })
   }

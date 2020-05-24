@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-2 sidebar text-center">
-            <img [src]="'assets/img/testimonials-1.jpg'" class="rounded-circle img-fluid" style="height: 10rem;">
+            <!-- <img [src]="'assets/img/testimonials-1.jpg'" class="rounded-circle img-fluid" style="height: 10rem;"> -->
             <h4>Hello, {{admin.name}}</h4>
             <h4>{{admin.email}}</h4>
             <hr>
@@ -33,8 +33,11 @@
         <div class="col-10 panel">
             <div class="row justify-content-center">
                 <div class="col-11">
-                    <h1>Admin Dashboard</h1>
-                    <hr>
+                    
+                    <div class="ad-top mb-5">
+                        <p class="display-4">Admin Dashboard</p>
+                    </div>
+
                     <app-add-design *ngIf="showaddDesign"></app-add-design>     
                     <app-addcloth *ngIf="showaddcloth"></app-addcloth>     
                     <app-manage-cloth *ngIf="showmanagecloth"></app-manage-cloth>

@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
         if(logged_user['password'] == formdata['password']){
  
           //add user details to sessionstorage
+          this.userService.loggedin = true;
  
           if(logged_user['admin']){
             //navigate to admin dashboard

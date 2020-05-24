@@ -45,6 +45,7 @@ import { WebstatsComponent } from './webstats/webstats.component';
 import { DesignerloginComponent } from './designerlogin/designerlogin.component';
 import { BrowsedesignerComponent } from './browsedesigner/browsedesigner.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ManageorderComponent } from './manageorder/manageorder.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     DesignerloginComponent,
     BrowsedesignerComponent,
     CheckoutComponent,
+    ManageorderComponent,
 
   ],
   imports: [

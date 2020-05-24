@@ -1,0 +1,70 @@
+<mat-card *ngIf="orders">
+    <mat-card-content>
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let order of orders">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p class="mx-auto">{{order.name}}</p>
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{order.created | date}}
+                </mat-panel-description>
+                
+                </mat-expansion-panel-header>
+                <p style="color: rgba(0, 0, 0, 0.678);">
+                  <p class="h3">Total Amount : {{order.data.amount}}</p>
+
+                        <div>
+                          <mat-card-content class="card-body">
+                            <p class="text-center h3">Design Details</p>
+                            <hr>
+                            <div class="row">
+                              <div class="col-8">
+                                <p class="h5">{{order.data.design.name}}</p>
+                                <p class="h6">{{order.data.design.description}}</p>
+                                <p class="h3">Amount : {{order.data.design.price}}</p>
+                              </div>
+                              <div class="col-4">
+                                <img [src]="'http://localhost:3000/design/'+order.data.design.image" style="height: 10rem;">
+                              </div>
+                            </div>
+                          </mat-card-content>
+                        </div>
+
+                        <div class="mt-5">
+                          <mat-card-content class="card-body">
+                            <p class="text-center h3">Designer Details</p>
+                            <hr>
+                            <div class="row">
+                              <div class="col-8">
+                                <p class="h5">{{order.designer.name}}</p>
+                                <p class="h6">{{order.designer.description}}</p>
+                              </div>
+                              <div class="col-4">
+                                <img [src]="'http://localhost:3000/design/'+order.designer.image" style="height: 10rem;">
+                              </div>
+                            </div>
+                          </mat-card-content>
+                        </div>
+
+                        <div class="mt-5">
+                          <mat-card-content class="card-body">
+                            <p class="text-center h3">Cloth Details</p>
+                            <hr>
+                            <div class="row">
+                              <div class="col-8">
+                                <p class="h5">{{order.data.cloth.name}}</p>
+                                <p class="h6">{{order.data.cloth.description}}</p>
+                                <p class="h3">Amount : {{order.data.cloth.price}}</p>
+                              </div>
+                              <div class="col-4">
+                                <img [src]="'http://localhost:3000/'+order.data.cloth.image" style="height: 10rem;">
+                              </div>
+                            </div>
+                          </mat-card-content>
+                        </div>
+                  
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>

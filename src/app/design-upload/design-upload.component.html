@@ -1,36 +1,28 @@
 <p>design-upload works!</p>
 <input type="file" (change)="uploadImage($event)">
 <img [src] = "imgURL">
-<!-- <div class="container-fluid">
-    <div class="mt-4" *ngIf="teamdata">
-        <mat-card class= "align-items-center" >
-            <p class="text-center display-4">Add New Member</p>
-            <hr>
-              <mat-card-content class="card-body">
- 
-        <div class="input-group mt-4">
-            <mat-form-field class="col-md">
-                <mat-label>Username</mat-label>
-                <input matInput #member>
-            </mat-form-field>
- 
-            <div class="input-group-append">
-                <button class="col-md" mat-raised-button color="primary" (click) = "addMember(member.value)">
-                    Add Member
-                  </button>
-            </div>
-        </div>
- 
-        <table class="table mt-5 col-md">
-            <tbody>
-                <tr *ngFor="let member of selectedMember;let i = index">
-                    <td>{{i+1}}</td>
-                    <td>{{member.username}}</td>
-                    <td>{{member.first}} {{member.last}}</td>
-                </tr>
-            </tbody>
-        </table>
-      </mat-card-content>
-      </mat-card>
-      </div>
-</div> -->
+
+<div class="container">
+    <mat-card>
+        <img mat-card-image [src]="'assets/add-top.jpg'">
+        <mat-card-content>
+            <form [formGroup]="designform" (submit)="submitForm(designform.value)">
+                <p class="h2 text-center">Upload Your Design</p>
+                <hr class="mb-5">
+
+                <mat-form-field appearance="outline" class="col-md">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name">
+                    <mat-error *ngIf="getControls().name.errors">Name is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="col-md">
+                    <mat-label>Name</mat-label>
+                    <textarea matInput formControlName="description"></textarea>
+                    <mat-error *ngIf="getControls().description.errors">Name is required</mat-error>
+                </mat-form-field>
+
+                <button color="primary" mat-button>Submit</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

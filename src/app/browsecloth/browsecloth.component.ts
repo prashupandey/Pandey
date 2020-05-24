@@ -94,7 +94,8 @@ export class BrowseclothComponent implements OnInit {
   }
 
   checkout(cloth){
-    sessionStorage.setItem('cloth', JSON.stringify(cloth));
+    if(cloth)
+      sessionStorage.setItem('cloth', JSON.stringify(cloth));
     this.router.navigate(['/checkout']);
   }
 

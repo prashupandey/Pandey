@@ -25,6 +25,7 @@ imgURL;
     this.designform = this.fb.group({
       name : '',
       image : '',
+      price : '',
       description : '',
       created : new Date
     })

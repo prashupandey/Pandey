@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
 
     <section class="mt-5" style="border-left: 3px solid red;padding-left: 2rem;">
       <p class="display-4 text-center">
@@ -8,21 +8,60 @@
   
       <div class="mt-5">
         <div class="row">
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-6">
-                <p class="h4 mt-3">Product Name :</p>
-                <p class="h1 mt-3">Total Amount :</p>
-              </div>
-              <div class="col-6">
-                <!-- <p class="h4 mt-3">{{order.modeldata.name}}</p>
-                <p class="h1 mt-3">₹ {{order.modeldata.price}}</p> -->
-              </div>
-            </div>
-          </div>
           <div class="col-md-4">
             <mat-card>
-              <!-- <img mat-card-image [src]="'http://localhost:3000/products/images/'+order.modeldata.image" style="height: 15rem;"> -->
+              <mat-card-content class="card-body">
+                <p class="text-center h3">Design Details</p>
+                <hr>
+                <div class="row">
+                  <div class="col-6">
+                    <p class="h5">{{order.design.name}}</p>
+                    <p class="h6">{{order.design.description}}</p>
+                    <p class="h3">Amount : {{order.design.price}}</p>
+                  </div>
+                  <div class="col-6">
+                    <img [src]="'http://localhost:3000/design/'+order.design.image" style="height: 5rem;">
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <div class="col-md-4">
+            <mat-card>
+              <mat-card-content class="card-body">
+                <p class="text-center h3">Designer Details</p>
+                <hr>
+                <div class="row">
+                  <div class="col-6">
+                    <p class="h5">{{designer.name}}</p>
+                    <p class="h6">{{designer.description}}</p>
+                    <p class="h3">Amount : {{designer_charge}}</p>
+                  </div>
+                  <div class="col-6">
+                    <img [src]="'http://localhost:3000/design/'+designer.image" style="height: 5rem;">
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <div class="col-md-4">
+            <mat-card>
+              <mat-card-content class="card-body">
+                <p class="text-center h3">Cloth Details</p>
+                <hr>
+                <div class="row">
+                  <div class="col-6">
+                    <p class="h5">{{order.cloth.name}}</p>
+                    <p class="h6">{{order.cloth.description}}</p>
+                    <p class="h3">Amount : {{order.cloth.price}}</p>
+                  </div>
+                  <div class="col-6">
+                    <img [src]="'http://localhost:3000/'+order.cloth.image" style="height: 5rem;">
+                  </div>
+                </div>
+              </mat-card-content>
             </mat-card>
           </div>
         </div>
@@ -32,8 +71,17 @@
   
     <mat-card class="mt-5">
       <mat-card-content class="card-body">
+
+        <div class="row justify-content-center">
+          <mat-form-field appearance="outline" class="col-md-6">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="name">
+        </mat-form-field>
+        </div>
+
         <form #checkout="ngForm" (ngSubmit)="getIntent()" class="checkout">
           <div class="form-row">
+
             <label for="card-info">Card Info</label>
             <div id="card-info" #cardInfo></div>
         

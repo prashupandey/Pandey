@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDashBoardComponent implements OnInit {
 
-  showOrders = false;
+  showOrders = true;
   showEditform = false;
   showOrderform = false;
-  showChat = true;
+  showChat = false;
   
   user;
 
@@ -23,8 +23,8 @@ export class UserDashBoardComponent implements OnInit {
   toggleShowOrders(){
     this.hideall();
     this.showOrders = true;
-
   }
+
   toggleEditform(){
     this.hideall();
     this.showEditform = true;

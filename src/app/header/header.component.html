@@ -6,49 +6,22 @@
                 <li class="nav-item active text-center">
                   <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home </a>
                 </li>
-
-                <li class="nav-item active text-center">
-                    <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Admin</a>
-                </li> 
-
-                <li class="nav-item active text-center">
-                    <a class="nav-link" [routerLink]="['/adddesign']" routerLinkActive="router-link-active">Add Design</a>
+                <li class="nav-item active text-center" *ngIf="!userservice.loggedin">
+                    <a class="nav-link" [routerLink]="['/register']" routerLinkActive="router-link-active" >Register</a>
                 </li>
 
-                <li class="nav-item active text-center">
-                    <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">Dashboard</a>
+                <li class="nav-item active text-center" *ngIf="isadmin">
+                    <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Admin Dashboard</a>
+                </li>
+                <li class="nav-item active text-center" *ngIf="isuser">
+                    <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >User Dashboard</a>
                 </li>
 
-                <li class="nav-item active text-center">
-                    <a class="nav-link" [routerLink]="['/browsecloth']" routerLinkActive="router-link-active">Browse Cloth</a>
+                <li class="nav-item active text-center" *ngIf="userservice.loggedin">
+                    <a class="nav-link" (click)="logout()" >Logout</a>
                 </li>
-
-                <li class="nav-item active text-center">
-                    <a class="nav-link" [routerLink]="['/browsedesign']" routerLinkActive="router-link-active">Browse Design</a>
-                </li>
-
-                <li class="nav-item active text-center">
-                    <a class="nav-link" [routerLink]="['/browsedesigner']" routerLinkActive="router-link-active">Browse Designer</a>
-                </li>
-
-                <li class="nav-item active text-center">
-                    <a class="nav-link" [routerLink]="['/ddash']" routerLinkActive="router-link-active">Designer Dashboard</a>
-                </li>
-
-                <li class="nav-item active text-center">
-                    <a class="nav-link" [routerLink]="['/dlogin']" routerLinkActive="router-link-active">Designer Login</a>
-                </li>
-        
-                <li class="nav-item active text-center">
-                    <a class="nav-link" *ngIf="!loggedin" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login </a>
-                </li>
-        
-                <li class="nav-item active text-center">
-                    <a class="nav-link" *ngIf="!loggedin" [routerLink]="['/register']" routerLinkActive="router-link-active" >Register  </a>
-                </li>
-        
-                <li class="nav-item active text-center">
-                  <a class="nav-link" *ngIf="loggedin" (click)="logout()" [routerLink]="['/registration']" routerLinkActive="router-link-active" >Log out  </a>
+                <li class="nav-item active text-center" *ngIf="!userservice.loggedin">
+                    <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login </a>
                 </li> 
             </ul>
         </div>

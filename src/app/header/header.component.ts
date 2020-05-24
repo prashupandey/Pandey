@@ -8,18 +8,19 @@ import { UserService } from '../user.service';
 })
 export class HeaderComponent implements OnInit {
 
-  loggedin = false;
-  constructor(private userservice: UserService) { }
+  isuser;
+  isadmin;
+  constructor(public userservice: UserService) { }
 
   ngOnInit(): void {
+    this.isuser = JSON.parse(sessionStorage.getItem('user'));
+    this.isadmin = JSON.parse(sessionStorage.getItem('admin'));
+
     let currentUser = JSON.parse(sessionStorage.getItem('user'));
-  }
-  if(user){
-    this.loggedin = true;
   }
 
   logout(){
-    
+    this.userservice.logout();
   }
 
 }

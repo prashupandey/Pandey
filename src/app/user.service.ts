@@ -6,9 +6,15 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UserService {
+  
+  loggedin = false;
 
   url = 'http://localhost:3000/user'
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) {
+    if(JSON.parse(sessionStorage.getItem('user')) || JSON.parse(sessionStorage.getItem('admin'))){
+      this.loggedin = true;
+    }
+  }
 
   addUser(formdata){
     return this.http.post(this.url+'/add', formdata);
@@ -26,5 +32,6 @@ export class UserService {
     sessionStorage.removeItem('user');
     sessionStorage.removeItem('admin');
     this.router.navigate(['/login']);
+    this.loggedin = false;
   }
 }

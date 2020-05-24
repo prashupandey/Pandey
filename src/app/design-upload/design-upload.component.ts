@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import { DesignService } from '../design.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-design-upload',
@@ -12,10 +14,36 @@ export class DesignUploadComponent implements OnInit {
   avatarName;
   message;
   imgURL;
-  constructor(private designService: DesignService) { }
+  designform;
+
+  constructor(private designService: DesignService, private fb: FormBuilder,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.initform();
   }
+
+  initform(){
+    this.designform = this.fb.group({
+      name : ['', Validators.required],
+      description : ['', Validators.required]
+    })
+  }
+
+  getControls(){
+    return this.designform.controls;
+  }
+
+  submitForm(formdata){
+    if(formdata.invalid){
+      return ;
+    }
+    formdata.image = this.avatarName;
+    console.log(formdata);
+    sessionStorage.setItem('design', JSON.stringify(formdata));
+    this.router.navigate(['/browsedesigner']);
+  }
+
   uploadImage(event)
   {
     let files = event.target.files;
