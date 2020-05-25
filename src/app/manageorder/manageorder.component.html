@@ -13,7 +13,7 @@
                 </mat-expansion-panel-header>
                 <p style="color: rgba(0, 0, 0, 0.678);">
                   <p class="h3">Total Amount : {{order.data.amount}}</p>
-
+                  <button mat-raised-button color="primary" (click)="createChat(order.designer._id)">Contact Designer</button>
                         <div>
                           <mat-card-content class="card-body">
                             <p class="text-center h3">Design Details</p>
@@ -25,7 +25,7 @@
                                 <p class="h3">Amount : {{order.data.design.price}}</p>
                               </div>
                               <div class="col-4">
-                                <img [src]="'http://localhost:3000/design/'+order.data.design.image" style="height: 10rem;">
+                                <img [src]="'http://localhost:3000/design/'+order.data.design.images[0]" style="height: 10rem;">
                               </div>
                             </div>
                           </mat-card-content>

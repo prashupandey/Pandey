@@ -10,10 +10,10 @@
                     <a class="nav-link" [routerLink]="['/register']" routerLinkActive="router-link-active" >Register</a>
                 </li>
 
-                <li class="nav-item active text-center" *ngIf="isadmin">
+                <li class="nav-item active text-center" *ngIf="userservice.isadmin">
                     <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Admin Dashboard</a>
                 </li>
-                <li class="nav-item active text-center" *ngIf="isuser">
+                <li class="nav-item active text-center" *ngIf="userservice.loggedin">
                     <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >User Dashboard</a>
                 </li>
 

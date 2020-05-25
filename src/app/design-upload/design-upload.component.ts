@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./design-upload.component.css']
 })
 export class DesignUploadComponent implements OnInit {
-  selectedFile;
-  avatarName;
+
+  images = [];
   message;
   imgURL;
   designform;
@@ -38,7 +38,7 @@ export class DesignUploadComponent implements OnInit {
     if(formdata.invalid){
       return ;
     }
-    formdata.image = this.avatarName;
+    formdata.images = this.images;
     console.log(formdata);
     sessionStorage.setItem('design', JSON.stringify(formdata));
     this.router.navigate(['/browsedesigner']);
@@ -57,15 +57,17 @@ export class DesignUploadComponent implements OnInit {
       return;
     }
     this.preview(event.target.files)
-    let formData=new FormData();
-    this.selectedFile=files[0];
-    this.avatarName=this.selectedFile.name;
-    console.log(this.avatarName);
-    formData.append('image', this.selectedFile, this.selectedFile.name);
-    this.designService.uploadImage(formData).subscribe(response=>
-      {
-      console.log(response)
-      })
+    for(let file of event.target.files){
+      let formData=new FormData();
+
+      this.images.push(file.name);
+
+      formData.append('image', file, file.name);
+      this.designService.uploadImage(formData).subscribe(response=>
+        {
+        console.log(response)
+        })
+    }
   }
  
   preview(files) {

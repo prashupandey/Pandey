@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
           if(logged_user['admin']){
             //navigate to admin dashboard
             sessionStorage.setItem('admin', JSON.stringify(logged_user));
+            this.userService.isadmin = true;
             this.router.navigate(['/admin'])
             return;
           }else{

@@ -20,7 +20,7 @@
                     <p class="h3">Amount : {{order.design.price}}</p>
                   </div>
                   <div class="col-6">
-                    <img [src]="'http://localhost:3000/design/'+order.design.image" style="height: 5rem;">
+                    <img [src]="'http://localhost:3000/design/'+order.design.images[0]" style="height: 5rem;">
                   </div>
                 </div>
               </mat-card-content>
@@ -88,7 +88,7 @@
             <div id="card-errors" role="alert" *ngIf="error">{{ error }}</div>
           </div>
         
-          <button type="submit">Pay ₹</button>
+          <button type="submit">Pay ₹{{amount}}</button>
       </form>
       </mat-card-content>
     </mat-card>

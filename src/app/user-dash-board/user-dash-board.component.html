@@ -6,9 +6,9 @@
             <h4>{{user.email}}</h4>
             <hr>
 
-            <button mat-button class="btn-block mt-3" [routerLink]="['/browsedesign']" routerLinkActive="router-link-active"  style="background-color: rgba(240, 248, 255, 0.1);">
+            <!-- <button mat-button class="btn-block mt-3" [routerLink]="['/browsedesign']" routerLinkActive="router-link-active"  style="background-color: rgba(240, 248, 255, 0.1);">
                 New Order
-            </button>
+            </button> -->
             <button mat-button class="btn-block mt-3" (click)="toggleEditform()" style="background-color: rgba(240, 248, 255, 0.1);">
                 Update Profile
             </button>
@@ -23,8 +23,8 @@
                     <p class="display-4 mt-3">User Dashboard</p>
                     <hr>
                     <app-create-order *ngIf ="showOrderform"></app-create-order>    
-                    <app-chat *ngIf="showChat" [user] = "user" [recId] = "'5ec122970e6b6c22742d3ef3'"></app-chat>
-                    <app-manageorder *ngIf="showOrders"></app-manageorder>
+                    <app-chat *ngIf="showChat && chatId" [user] = "user" [recId] = "chatId" ></app-chat>
+                    <app-manageorder *ngIf="showOrders" (chat)="createChat($event)"></app-manageorder>
                 </div>
             </div>
         </div>

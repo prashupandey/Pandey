@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-md-3 mt-4" *ngFor="let design of designs">
                             <mat-card (click)="selectDesign(design)">
-                                <img mat-card-image [src]="'http://localhost:3000/design/'+design.image">
+                                <img mat-card-image [src]="'http://localhost:3000/design/'+design.images[0]">
                             
                                 <mat-card-content class="card-body">
                                     <h2>{{design.name}}</h2>

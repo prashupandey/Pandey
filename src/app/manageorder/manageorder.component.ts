@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { OrderService } from '../order.service';
 
 @Component({
@@ -10,6 +10,8 @@ export class ManageorderComponent implements OnInit {
 
   orders;
   user;
+  @Output() chat = new EventEmitter<any>();
+
   constructor(private orderservice: OrderService) { }
 
   ngOnInit(): void {
@@ -22,6 +24,10 @@ export class ManageorderComponent implements OnInit {
       console.log(data);
       this.orders = data;
     })
+  }
+
+  createChat(id){
+    this.chat.emit(id);
   }
 
 }

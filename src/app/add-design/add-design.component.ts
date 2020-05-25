@@ -39,7 +39,7 @@ imgURL;
 
       return;
     }
-    formdata.image = this.image;
+    formdata.images = [this.image];
     this.designservice.addDesign(formdata).subscribe(data => {
       console.log(data);
     })

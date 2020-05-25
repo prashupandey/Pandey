@@ -25,7 +25,8 @@
                     <mat-error *ngIf="returnControls().description.errors">Description is Required</mat-error>
               </mat-form-field>
               <input type="file" (change)="uploadImage($event)">
-                          <img [src] = "imgURL">
+            <img [src] = "imgURL">
+
             <div class="col-md-10">
             <button mat-raised-button color="warn" class="ml-auto mt-3">Add Design</button>
              </div>

@@ -44,7 +44,7 @@
         <div class="row">
             <div class="col-md-3" *ngFor="let design of designs.slice(0, 4)">
                 <mat-card>
-                    <img [src]="'http://localhost:3000/design/'+design.image" mat-card-image>
+                    <img [src]="'http://localhost:3000/design/'+design.images[0]" mat-card-image>
                     <mat-card-content>
                         <p class="h3">{{design.name}}</p>
                     </mat-card-content>

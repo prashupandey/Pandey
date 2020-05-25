@@ -11,6 +11,7 @@ export class UserDashBoardComponent implements OnInit {
   showEditform = false;
   showOrderform = false;
   showChat = false;
+  chatId;
   
   user;
 
@@ -33,6 +34,12 @@ export class UserDashBoardComponent implements OnInit {
   toggleOrderform(){
     this.hideall();
     this.showOrderform = true;
+  }
+
+  createChat(id){
+    this.hideall();
+    this.showChat = true;
+    this.chatId = id;
   }
 
   // toggleChat(){

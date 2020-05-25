@@ -27,7 +27,7 @@
                           </div>
                       </div>
                       <div class="col-3">
-                        <img [src]="'http://localhost:3000/design/'+design.image" class="img-fluid">
+                        <img [src]="'http://localhost:3000/design/'+design.images[0]" class="img-fluid">
                       </div>
                   </div>
                   <button class="mt-4" mat-button color="error" (click)="delete(design._id)">Delete</button>

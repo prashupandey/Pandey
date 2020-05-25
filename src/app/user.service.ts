@@ -8,10 +8,15 @@ import { Router } from '@angular/router';
 export class UserService {
   
   loggedin = false;
+  isadmin = false;
 
   url = 'http://localhost:3000/user'
   constructor(private http: HttpClient, private router: Router) {
-    if(JSON.parse(sessionStorage.getItem('user')) || JSON.parse(sessionStorage.getItem('admin'))){
+    if(JSON.parse(sessionStorage.getItem('user')) && JSON.parse(sessionStorage.getItem('admin'))){
+      this.loggedin = true;
+      this.isadmin = true;
+    }
+    else if(JSON.parse(sessionStorage.getItem('user'))){
       this.loggedin = true;
     }
   }
